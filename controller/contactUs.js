@@ -4,7 +4,7 @@ const path = require("path")
 const sendMail = require("../utils/utils")
 
 const getContactForm = (req,res) => {
-    res.sendFile(path.join(__dirname, "../templates/contactPage.html"))
+    res.sendFile(path.join(__dirname, "../templates/index.html"))
 }
 
 
