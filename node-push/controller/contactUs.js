@@ -11,10 +11,13 @@ const getContactForm = (req,res) => {
 const postEmail = async (req,res)=>{
     console.log(req.body);
 
+
     const {email, subject, message} = req.body;
 
     if (!email || !subject || !message ){
         res.send("Error")
+
+        console.log(subject, message)
     }
 
     await sendMail( /// send to OWNER
@@ -31,7 +34,7 @@ const postEmail = async (req,res)=>{
 
     )
 
-    res.send("SENT")
+    res.sendFile(path.join(__dirname, "../templates/index.html"))
 
 }
 

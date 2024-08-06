@@ -5,7 +5,7 @@ const {getContactForm, postEmail} = require("../controller/contactUs")
 
 route.get("/", getContactForm)
 
-route.post("/submit", postEmail)
+route.post("/", postEmail)
 
 
 module.exports = route // lol forgot this

@@ -1,6 +1,5 @@
 const express = require("express");
 const dotenv = require("dotenv").config();
-const serverless = require("serverless-http");
 const app = express();
 const port = process.env.PORT || 5000;
 const routes = require("./route/route");
